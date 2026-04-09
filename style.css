@@ -15,19 +15,22 @@ html {
     --escuro: #0f172a;
     --maisEscuro: #0a0f1c;
     --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255,0.1);
+    --vidro: rgba(255, 255, 255, 0.1);
 }
 
 body {
     background-color: var(--escuro);
+    color: var(--claro);
 }
 
+/* NAVEGAÇÃO */
 .navegacao {
     position: fixed;
-    background: rgba(15,23,42,0.8);
+    background: rgba(15, 23, 42, 0.95);
     width: 100%;
-    z-index: 100;
-    padding: 1.5rem;
+    z-index: 1000;
+    padding: 1rem;
+    border-bottom: 1px solid var(--vidro);
 }
 
 .menu {
@@ -43,110 +46,135 @@ body {
     font-weight: 800;
     position: relative;
     padding: 0.5rem 0;
-    font-size: 1.5em;
+    font-size: 1.1rem;
 }
 
-.menu-link::after {
-    content: '';
-    height: 2px;
-    width: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
-    transition: width 0.5s ease;
+.menu-link:hover {
+    color: var(--secundaria);
 }
 
-.menu-link:hover::after {
-    width: 100%;
-}
-
+/* CABEÇALHO / INÍCIO */
 .cabecalho {
-    display: flex;             
-    justify-content: center;   
-    align-items: center;       
-    gap: 6rem;                 
-    min-height: 70vh;        
-    padding-top: 120px;         
-    text-align: center;        
-}
-
-.perfil-item h3 {
-    color:  #90bbe9;       
-    margin-top: 1.5rem;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    min-height: 80vh;
+    padding-top: 100px;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .foto-perfil {
-    width: 250px;
-    height: 250px;
-    box-shadow:0px 0px 28px 9px #425973;
+    width: 220px;
+    height: 220px;
+    box-shadow: 0px 0px 20px 5px rgba(99, 134, 172, 0.3);
     border-radius: 50%;
     border: 4px solid var(--vidro);
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
-h3 {
-    color: var(--secundaria);
-    font-weight: bold;
-    margin: 20px;
-}
-
+/* SOBRE */
 .sobre {
-    padding: 2rem 2rem 6rem 2rem;
+    padding: 5rem 2rem;
+    background-color: var(--maisEscuro);
 }
 
 .sobre-titulo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--secundaria);
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.sobre-caixa{
-    padding: 2rem;
-    max-width: 600px;
+.sobre-caixa {
+    max-width: 800px;
     margin: 0 auto;
-    border-radius: 16px;
+    text-align: center;
 }
 
 .sobre-texto {
-    color: var(--claro);
-    text-align: justify;
-    font-size: 1.2rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
+/* SEÇÃO PROJETOS */
 .projetos {
-    padding: 6rem 2rem;
+    padding: 5rem 2rem;
 }
 
-.projetos-titulo {
+.secao-titulo-central {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
-}
-
-.cards:hover {
-    box-shadow: 0 10px 20px rgba(79,70,229,0.2);
-    transform: translateY(-10px) scale(1.3);
-    transition: all 0.5s ease;
+    margin-bottom: 3rem;
+    color: var(--secundaria);
 }
 
 .projetos-caixa {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300pz,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* CARD COM SWIPER */
 .cards {
-    background: #0f172a;
+    background: #1e293b;
     border-radius: 16px;
-    backdrop-filter: blur(5px);
     border: 1px solid var(--vidro);
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.projetos-img {
-    height: 200px;
+.cards:hover {
+    transform: translateY(-8px);
+}
+
+.projeto-img {
+    height: 220px;
     width: 100%;
     object-fit: cover;
+}
+
+.caixa-texto-projeto {
+    padding: 1.5rem;
+    background: #0f172a;
+    min-height: 150px;
+}
+
+.projetos-titulo-card {
+    color: var(--secundaria);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.projetos-texto {
+    color: var(--claro);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* CUSTOMIZAÇÃO DAS SETAS E PONTOS DO SWIPER */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--claro) !important;
+    transform: scale(0.6);
+}
+
+.swiper-pagination-bullet {
+    background: var(--claro) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--secundaria) !important;
+}
+
+/* FOOTER */
+footer {
+    padding: 2.5rem;
+    text-align: center;
+    border-top: 1px solid var(--vidro);
+    color: var(--secundaria);
+    font-size: 0.9rem;
 }

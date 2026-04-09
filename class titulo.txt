@@ -1,0 +1,12 @@
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo"> Contatos</h2>
+        <form class="form-contato" id="formulario">
+            <div class="form">
+                <input placeholder="Nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="text-form" placeholder="Digite sua mensagem">
+                </textarea>
+            </div>
+        </form>
+    </section>
