@@ -106,6 +106,19 @@ body {
     padding: 5rem 2rem;
 }
 
+.botao-link {
+    color: #00fbff; /* Uma cor que destaque no seu fundo escuro */
+    text-decoration: underline; /* Deixa o sublinhado para parecer um link */
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.botao-link:hover {
+    color: #ffffff; /* Muda de cor ao passar o mouse */
+}
+
 .secao-titulo-central {
     text-align: center;
     font-size: 2.5rem;
@@ -144,6 +157,7 @@ body {
     object-fit: contain; /* Preenche o espaço sem distorcer a imagem */
     object-position: center; 
     display: block;
+    pointer-events: none;
 }
 
 /* CAIXA DE TEXTO - AJUSTADA */

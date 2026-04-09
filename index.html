@@ -61,6 +61,9 @@
                                 <p class="projetos-texto">Componentes utilizados:.</p>
                                 <br>
                                 <p class="projetos-texto">SafeAreaView, View, Text, Imagem, Card (React Native Paper).</p>
+                                 <br>
+                                <a href="https://expo.dev/accounts/eduardo_aguiar/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -72,6 +75,9 @@
                                 <p class="projetos-texto">Componentes utilizados:</p>
                                 <br>
                                 <p class="projetos-texto">TouchableOpacity, Image (via URI), SafeAreaView, View (Containers Específicos)+.</p>
+                                <br>
+                                <a href="https://expo.dev/accounts/eduardo_aguiar/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -83,6 +89,9 @@
                                 <p class="projetos-texto">Componentes utilizados:</p>
                                 <br>
                                 <p class="projetos-texto">StyleSheet, Text, View, TouchableOpacity, Image, ScrollView.</p>
+                                <br>
+                                <a href="https://expo.dev/accounts/eduardo_aguiar/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -94,12 +103,16 @@
                                 <p class="projetos-texto">Componentes utilizados:</p>
                                 <br>
                                 <p class="projetos-texto">TextInput, TouchableOpacity, ViewText, Stylesheet</p>
+                                <br>
+                               <a href="https://expo.dev/accounts/eduardo_aguiar/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+            
                 </div>
             </div>
 
@@ -115,6 +128,9 @@
                                 <p class="projetos-texto">Componentes utilizados:.</p>
                                 <br>
                                 <p class="projetos-texto">SafeAreaView, View, Text, Imagem, Card (React Native Paper).</p>
+                                <br>
+                                <a href="https://expo.dev/accounts/19041993/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -126,6 +142,9 @@
                                 <p class="projetos-texto">Componentes utilizados:</p>
                                 <br>
                                 <p class="projetos-texto">TouchableOpacity, Image (via URI), SafeAreaView, View (Containers Específicos)+.</p>
+                                 <br>
+                                 <a href="https://expo.dev/accounts/19041993/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -137,6 +156,9 @@
                                 <p class="projetos-texto">Componentes utilizados:</p>
                                 <br>
                                 <p class="projetos-texto">StyleSheet, Text, View, TouchableOpacity, Image, ScrollView.</p>
+                                 <br>
+                                 <a href="https://expo.dev/accounts/19041993/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -148,6 +170,9 @@
                                 <p class="projetos-texto">Componentes utilizados:</p>
                                 <br>
                                 <p class="projetos-texto">TextInput, TouchableOpacity, ViewText, Stylesheet</p>
+                                 <br>
+                                 <a href="https://expo.dev/accounts/19041993/snacks" target="_blank" class="botao-link">
+                                Clique aqui para acessar o Expo</a>
                             </div>
                         </div>
                     </div>
@@ -219,17 +244,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // Inicializa todos os carrosséis da página
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
+       // Inicializa todos os carrosséis da página
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    // Garante que o clique funcione mesmo com o arraste
+    preventClicks: false,
+    preventClicksPropagation: false,
+    
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
     </script>
 </body>
 </html>
